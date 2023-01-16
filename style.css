@@ -1,0 +1,381 @@
+/* some reset for easy life */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --green-color: rgb(37, 211, 102);
+  --dark-color: #1c1e21;
+}
+
+.fullPage {
+  height: 100vh;
+  width: 100%;
+}
+
+/* customize the Nav`Bar */
+
+header {
+  max-width: 100%;
+  min-width: 100%;
+  top: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+}
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+.greenApp img,
+.listTop ul li,
+.infoTop span,
+button {
+  cursor: pointer;
+}
+.logoGreen {
+  height: 3rem;
+  object-fit: cover;
+  width: 100%;
+  padding: 0 5rem;
+}
+.infoTop span,
+button {
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+}
+.infoTop span {
+  margin-right: 2rem;
+  transition: all ease-in 0.3s;
+}
+.infoTop span:hover {
+  border-bottom: 0.2rem solid var(--green-color);
+  right: 100%;
+  transform: translate(100%, 0);
+}
+.downloadBtn {
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  margin: 0 2rem;
+  background-color: var(--green-color);
+  transition: all ease-in-out 0.5s;
+  z-index: -10;
+}
+.downloadBtn:hover {
+  background-color: var(--dark-color);
+  color: white;
+  transform: cubic-bezier(0.65, 2, 0.076, 5);
+}
+.navBar ul {
+  width: 100%;
+  padding: 0 5rem;
+}
+li {
+  display: inline;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  width: 30%;
+  transition: all ease-out 0.3s;
+}
+.listTop li:hover {
+  border-bottom: 0.2rem solid var(--green-color);
+}
+
+/* customize the middle content */
+
+.container {
+  height: 80vh;
+  background-color: rgb(230, 255, 218);
+}
+.middle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 10rem;
+}
+.middle p {
+  width: 60%;
+  margin-left: 30%;
+  font-size: 2rem;
+}
+.middle h2 {
+  width: 10%;
+  margin-left: 10%;
+  font-size: 5rem;
+  font-weight: 900;
+}
+.middle p:nth-last-of-type(1) {
+  font-size: 1.5rem;
+  padding-top: 5%;
+}
+.middle span {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Customize the info cards from the middle page */
+
+.allCards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px black solid;
+  background-color: var(--dark-color);
+  color: #ffffff;
+  border-radius: 2rem;
+  height: 34.5rem;
+  width: 24rem;
+  margin: 0 1rem;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerCard {
+  width: 20rem;
+  height: 10rem;
+}
+.ph1 {
+  height: 8rem;
+  width: 20rem;
+}
+.ph2 {
+  height: 6rem;
+  width: 20rem;
+}
+.cardBtn {
+  height: 5rem;
+  width: 20rem;
+  border-radius: 3rem;
+  transition: all ease-in 1s;
+}
+.cardBtn:hover {
+  background-color: black;
+  color: white;
+  transform: cubic-bezier(0.65, 2, 0.076, 1);
+}
+.item .title {
+  font-size: 1.2rem;
+  padding: 3rem 0 1rem 0;
+}
+.item h2 {
+  font-size: 4rem;
+  padding-bottom: 3rem;
+}
+.item p {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+.item:hover {
+  background-color: var(--green-color);
+  color: black;
+}
+/* footer from the bottom cards */
+
+.infoUnderCards p {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.infoUnderCards a {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: black;
+}
+
+/* Second section with photos. Under the cards */
+.aboutPhotos img {
+  height: 25rem;
+  width: 30rem;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+.feature-photo {
+  padding: 1.5rem 1.2rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 30%;
+  margin: 0 2%;
+  padding-left: 5rem;
+}
+.btns {
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+}
+.btns button {
+  margin-left: 2rem;
+  background-color: white;
+  border: 0.1rem solid black;
+  padding: 1.3rem 1.5rem;
+  border-radius: 50%;
+}
+/* here, i put the overflow to hidden just to look like whatsApp site, if I worked with Js, i don't do like that */
+.photos {
+  overflow: hidden;
+  margin: 1% 0 1% 1%;
+  width: 60%;
+}
+.left-description {
+  padding-top: 15rem;
+}
+.left-description h2 {
+  font-size: 4rem;
+}
+.left-description p {
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+.aboutPhotos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  position: relative;
+  border-radius: 0 0 5rem 5rem;
+  align-items: center;
+  height: 60vh;
+}
+.slider {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-color: var(--dark-color);
+}
+.responsive-photos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.feature-photo h2 {
+  width: 50%;
+  font-size: 4rem;
+}
+.feature-photo p {
+  font-size: 2rem;
+  padding-top: 2rem;
+  width: 39%;
+  border-bottom: 0.2rem solid var(--green-color);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.feature-photo p:hover {
+  color: var(--green-color);
+}
+.under-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.feature-photo span {
+  font-size: 2rem;
+}
+
+/* ---------------          Footer features------------------------ */
+.footer-height {
+  background-color: var(--dark-color);
+  height: 60vh;
+}
+.footer-page {
+  height: 100%;
+}
+.footer-a,
+.bottom-footer-items p,
+a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.footer-page-lists {
+  display: flex;
+  padding-left: 10rem;
+}
+.top-footer-items {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 2rem;
+}
+.bottom-footer-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 2rem 0 2rem;
+  margin: 0 5rem;
+  border-top: 0.2rem solid grey;
+}
+.bottom-footer-items p {
+  padding: 0 2rem;
+}
+.footer-a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 8rem;
+}
+.footer-a a {
+  margin: 0;
+  padding: 0.8rem 0rem;
+  font-size: 2rem;
+}
+.footer-a p {
+  font-size: 1.4rem;
+  padding-bottom: 2.5rem;
+}
+.footer-division {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.under-logo-btn {
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 3rem;
+  padding: 1.3rem 5rem;
+  background-color: var(--green-color);
+}
+.lang-select {
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: var(--dark-color);
+  color: #ffffff;
+  border-radius: 3rem;
+  border: 0.2rem solid #ffffff;
+  padding: 1rem 10rem 1rem 1rem;
+}
+.option-btn {
+  padding-left: 5rem;
+}
+.bottom-footer-btns a {
+  border: 0.15rem solid #ffffff;
+  padding: 1.3rem 1.5rem;
+  border-radius: 3rem;
+}
